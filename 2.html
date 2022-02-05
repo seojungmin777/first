@@ -3,68 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>WEB- css </title>
-    <style>
-    a{
-      color:red;
-      text-decoration:none;
-    }
-    h1{
-text-align: center;
-      font-size: 50px
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
 
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
 
-<ol>
+<div id="grid">
+
+
+
+ <ol>
   <li><a href="1.html">html</a></li>
-  <li><a href="2.html"style="color:pink">css</a> </li>
+  <li><a href="2.html"id="active">css</a> </li>
   <li><a href="3.html">javascript</a></li>
-</ol>
-<img width="150" src="coding.jpg" alt="코딩쓰~">
+ </ol>
 
-
-<p style="margin-top:45px;" >
-
+<div class="text">
+<h2>CSS</h2>
 <a href="https://ko.wikipedia.org/wiki/HTML">
-  <strong><u>HyperText Mark-up Language<strong>
-  </u></a>
-  <p>
-
-  <u>[style="color:pink]</u> html의속성이다 스타일이란 속성은 그값으로 반드시
+  HyperText Mark-up Language
+  </a>
+  [style="color:pink] html의속성이다 스타일이란 속성은 그값으로 반드시
   css 효과가 들어온다
-</p>
-<p>
-
-[style
-a{ color:red;}
-/style]
-여기있는 style이라는 태그는 반대로 속성이 효과만있어서 저효과를 누구에게 지정할지
-알수없어서 여기에 있는 이 a{}라고 하는 이런코드가 추가적으로 더필요한것이다
- 그래서  a 를선택자 셀렉터
-color:red를 데코레이션 이라고 한다
-</p>
-
-<p>
- 컨트롤+쉬프트+k 줄삭제
-</p>
- <p>
- 컨트롤+쉬프트+d 줄복제
-</p>
-
-
-  <p>
+  a{ color:red;}
+  /style]
+  여기있는 style이라는 태그는 반대로 속성이 효과만있어서 저효과를 누구에게 지정할지
+  알수없어서 여기에 있는 이 a{}라고 하는 이런코드가 추가적으로 더필요한것이다
+   그래서  a 를선택자 셀렉터
+  color:red를 데코레이션 이라고 한다
+  태그<[class].~<[id]#~
+   컨트롤+쉬프트+k 줄삭제
+   컨트롤+쉬프트+d 줄복제
   1. 속성값 뒤에 !important; 를 붙인 속성 ( !important의 경우 종료마크인 ;(세미콜론) 안쪽에 작성되어야 한다.)
   > 2. 태그에 직접적으로 style 속성을 넣는 방식 (인라인스타일 방식)
   > 3. HTML문서 에서 style을 직접 지정한 속성 (내부스타일 방식)
   > 4. #id 로 지정한 속성 > 4. .클래스, :추상클래스 로 지정한 속성
   > 5. 태그이름 으로 지정한 속성 > 6. 상위 객체에 의해 상속된 속성 (외부스타일 방식)
-  </p>
-</p>
+ </div>
+</div>
 </body>
+
 </html>
 <!--
-<font color="red"> 블라블라<font>
+<font color="red"> 블라블라</font>
 -->
