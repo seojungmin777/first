@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+function setColor(color){
+  var alist = document.querySelectorAll('a');
+  var i = 0 ;
+  while(i < alist.length){
+  alist[i].style.color = color;
+  i = i + 1;
+   }
+}
+
+
+    function nightDayHandler(self){
+        var tag = document.querySelector('body');
+        if(self.value === 'night'){
+        tag.style.backgroundColor = 'black';
+        tag.style.color = 'white';
+        self.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0 ;
+        while(i < alist.length){
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+         }
+        }else{
+          tag.style.backgroundColor = 'white';
+          tag.style.color = 'black';
+          self.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0 ;
+        while(i < alist.length){
+        alist[i].style.color = 'blue';
+        i = i + 1;
+         }
+        }
+      }
+
+        </script>
+  </head>
+  <body>
+
+    <h2><a href="#">객체</a></h2>
+    객체의 얼굴중하나는 정리정돈의 수단 함수가많아지면 함수와연관되어있는 변수들이많아지면 복잡해지기때문에
+    서로 연관된 함수와 서로 연관된 변수 같은 이름으로 그룹핑해서 잘정리하기위한 도구이다
+
+    <input type="button"  value="night"
+    onclick="
+    nightDayHandler(this);
+
+    ">
+
+
+  </body>
+</html>

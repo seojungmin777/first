@@ -3,35 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script>
-function nightDayHandler(self){
-    var tag = document.querySelector('body');
-    if(self.value === 'night'){
-    tag.style.backgroundColor = 'black';
-    tag.style.color = 'white';
-    self.value = 'day';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0 ;
-    while(i < alist.length){
-    alist[i].style.color = 'powderblue';
-    i = i + 1;
-     }
-    }else{
-      tag.style.backgroundColor = 'white';
-      tag.style.color = 'black';
-      self.value = 'night';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0 ;
-    while(i < alist.length){
-    alist[i].style.color = 'blue';
-    i = i + 1;
-     }
-    }
-  }
-
-    </script>
   </head>
   <body>
     <!-- 함수  -->
@@ -53,12 +24,14 @@ function nightDayHandler(self){
   }
 
   onePlusOne();
-function sum(left,right,){
+function sum(left,right){
   document.write(left+right+'<br>');
 }
 function sumColorRed(left, right){
   document.write('<div style="color:red">'+left+right+'</div><br>');
 }
+
+
  sum(2,3); //5
   sumColorRed(2,3); //5
     sum(3,4); //7
@@ -69,25 +42,16 @@ function sumColorRed(left, right){
 
 
 function sum2(left, right){
-   return left+ right;
+   return left+right;
 }
-
 document.write(sum2(2,3)+'<br>');
 document.write('<div style="color:red">'+sum2(2,3)+'</div>');
 document.write('<div style="font-size:3rem">'+sum2(2,3)+'</div>');
 
-function sum3(al, ar){
-  document.write(al+ar+'<br>');
-}
- sum3(3,1);
-</script>
-<div class="">
-  <a href="#">안녕</a>
 
-</div>
+</script>
+
 <!--   -->
-<!--계산이라는 기능만을 sum2라는 함수가 구현함으로써 저 원자화딘 기능을 다양한 맥락에서 활용할수 있는
-자유도가 생기게되는 겁니다 -->
 
 
 
@@ -115,8 +79,30 @@ function sum(left,right)left,right 매개변수 영어로 parameter라고 부른
   </ul>
     <input type="button"  value="night"
     onclick="
-    nightDayHandler(this);
+    var tag = document.querySelector('body');
+    if(this.value === 'night'){
+    tag.style.backgroundColor = 'black';
+    tag.style.color = 'white';
+    this.value = 'day';
 
+    var alist = document.querySelectorAll('a');
+    var i = 0 ;
+    while(i < alist.length){
+    alist[i].style.color = 'powderblue';
+    i = i + 1;
+    }
+    }else{
+      tag.style.backgroundColor = 'white';
+      tag.style.color = 'black';
+      this.value = 'night';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0 ;
+    while(i < alist.length){
+    alist[i].style.color = 'blue';
+    i = i + 1;
+      }
+    }
     ">
 
 
