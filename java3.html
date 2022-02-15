@@ -4,40 +4,39 @@
     <meta charset="utf-8">
     <title></title>
     <script>
-function setColor(color){
+function LinksSetColor(color){
   var alist = document.querySelectorAll('a');
   var i = 0 ;
   while(i < alist.length){
   alist[i].style.color = color;
   i = i + 1;
    }
+ }
+
+function BodySetColor(color){
+document.querySelector('body').style.color = color;
+}
+
+function BackgroundSetColor(color){
+  document.querySelector('body').style.backgroundColor = color;
 }
 
 
     function nightDayHandler(self){
         var tag = document.querySelector('body');
         if(self.value === 'night'){
-        tag.style.backgroundColor = 'black';
-        tag.style.color = 'white';
+        Back.groundSetColor('black');
+        Body.setColor('white');
         self.value = 'day';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0 ;
-        while(i < alist.length){
-        alist[i].style.color = 'powderblue';
-        i = i + 1;
-         }
+        Links.SetColor('powderblue');
+
         }else{
-          tag.style.backgroundColor = 'white';
-          tag.style.color = 'black';
+          Back.groundSetColor('white');
+          Body.setColor('black');
           self.value = 'night';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0 ;
-        while(i < alist.length){
-        alist[i].style.color = 'blue';
-        i = i + 1;
-         }
+      Links.setColor('blue');
         }
       }
 
@@ -48,8 +47,17 @@ function setColor(color){
     <h2><a href="#">객체</a></h2>
     객체의 얼굴중하나는 정리정돈의 수단 함수가많아지면 함수와연관되어있는 변수들이많아지면 복잡해지기때문에
     서로 연관된 함수와 서로 연관된 변수 같은 이름으로 그룹핑해서 잘정리하기위한 도구이다
+    <br>
+    디렉토리 또는 폴더 라는 도구가있어서 우리는정리정돈할수있지요
+    이객체 라는 것은 만드는법은 배우지 않았지 저것도 폴더라는 관점으로 보셔도 무방합니다
+    <br>
+    [document]는 객체라는걸 알수있다
+    그리고[document.]뒤에 있는 querySelector라고 하는 것이 형태를 보니까 document라는
+    객체에 속해 있는 함수 라는 것을 알수있다 그리고
+    객체에 속해있는 함수는 함수라고 하지 않고 메소드(method)라고 부릅니다
 
-    <input type="button"  value="night"
+
+    <input id="night_day" type="button"  value="night"
     onclick="
     nightDayHandler(this);
 
